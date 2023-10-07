@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+
+<h1>Story Form</h1>
+
+<form action="/story">
+
+    {% for parts in story_parts %}
+
+    <input type="text" placeholder="{{parts}}" name="{{parts}}">
+    <br>
+
+    {% endfor %}
+    <button>Submit</button>
+
+</form>
+
+
+{% endblock %}
